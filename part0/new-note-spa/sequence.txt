@@ -1,5 +1,5 @@
-# the exercise 0.5 of FullStack Open 2021
-title spa
+# the exercise 0.6 from FullStack Open 2021 
+title new-note-spa
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
 server-->browser: HTML-code
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
@@ -19,3 +19,21 @@ note over browser:
 browser executes the event handler
 that renders notes to display
 end note
+
+note over browser:
+now the user enters "hello"
+to the input box and click "Save"
+end note
+
+note over browser:
+the browser execute JavaScript codes
+to modify the notes via DOM API
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over browser:
+receive 201 from the server.
+no redirection, just notification.
+end note
+
